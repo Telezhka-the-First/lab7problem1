@@ -19,20 +19,22 @@ int Count_Height(AVL_tree tree[], int id) {
 }
 
 int main() {
-	ifstream foe("balance.in");
+    ifstream foe("balance.in");
     ofstream ally("balance.out");
 
     int number;
     foe >> number;
-	number++;
+    number++;
 
     AVL_tree *tree = new AVL_tree[number * sizeof(AVL_tree)];
-	
-	for (int i = 1; i < number; i++) foe >> tree[i].id >> tree[i].left >> tree[i].right;
-	
-	Count_Height(tree, 1);
-	
-	foe.close();
+    
+    for (int i = 1; i < number; i++) foe >> tree[i].id >> tree[i].left >> tree[i].right;
+
+    Count_Height(tree, 1);
+
+    for (int i = 1; i < number; i++) ally << tree[i].balance << "\n";
+
+    foe.close();
     ally.close();
     return 0;
 }
