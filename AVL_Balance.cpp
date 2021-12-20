@@ -1,5 +1,4 @@
 
-#include <iostream>
 #include <fstream>
 
 using namespace std;
@@ -12,9 +11,6 @@ struct AVL_tree {
 };
 
 int main() {
-
-	cout << "Hello world!";
-	
 	ifstream foe("balance.in");
     ofstream ally("balance.out");
 
