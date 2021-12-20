@@ -1,11 +1,16 @@
 
-#include <iostream>
+#include <fstream>
 
 using namespace std;
 
 int main() {
+	ifstream foe("balance.in");
+    ofstream ally("balance.out");
 
-	cout << "Hello world!";
+    int number;
+    foe >> number;
 	
+	foe.close();
+    ally.close();
     return 0;
 }
