@@ -20,6 +20,11 @@ int main() {
 
     int number;
     foe >> number;
+	number++;
+
+    AVL_tree *tree = new AVL_tree[number * sizeof(AVL_tree)];
+    
+    for (int i = 1; i < number; i++) foe >> tree[i].id >> tree[i].left >> tree[i].right;
 	
 	foe.close();
     ally.close();
